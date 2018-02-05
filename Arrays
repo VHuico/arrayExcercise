@@ -1,0 +1,57 @@
+/***********************************************
+* CS1101 - Fall 2017
+* Instructor: Villanueva
+* Authors: [Victor Huicochea]
+           [Alejandra Maciel]
+************************************************/
+
+import java.util.Scanner;
+ 
+public class Arrays {
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in);
+      
+	    //Initialize the arrays and needed variables
+ 
+        String[ ] item = new String [4];
+        double[ ] expense = new double [4];
+        int i = 0;
+        int j;
+        double mostExpensive;
+        double total = 0;
+
+        //Initialize the arrays and needed variables
+ 
+        item [0] = "Uber";
+        item [1] = "Airface";
+        item [2] = "Hotel";
+        item [3] = "Food";
+       
+        expense [0] = 50.75;
+        expense [1] = 400.50;
+        expense [2] = 300.00;
+        expense [3] = 120.25;
+         
+       //Find the item with the maximum expense and print it
+
+	    for (j = 1; j <= 3; j++){
+            if (expense[i] > expense[j]){
+                mostExpensive = expense[i];
+            }
+            else{
+                mostExpensive = expense[j];
+                i = j;
+            }
+        }
+         
+        System.out.println("The highest expense was " + item[i] + " with an amount of " + expense[i]);
+       
+	    //Find the total of expenses and print it  
+        for (i = 0; i < 4; i++) {
+            total = total + expense[i];
+        }
+        System.out.println("The total expense was " + total);
+    }
+}
+             
+                   
